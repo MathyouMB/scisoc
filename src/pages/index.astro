@@ -11,14 +11,48 @@
 		<title>Astro</title>
 	</head>
 	<body>
+		<!-- <div class="navbar">
+			<img class="logo" src="/logo.webp"/>
+		</div> -->
+		<div class="background-color"></div>
 		<div class="background">
-			<div class="foreground">
-				<!-- <h1>Matthew MacRae-Bovell</h1> -->
+			<div class="foreground"></div>
+			
+		</div>
+		<div class="content">
+			<div class="header">
+				<h1 class="name">Matthew MacRae-Bovell</h1>
+				<h2 class="title">SciSoc VP Internal Platform</h2>
+			</div>
+			<div class="platform">
+				<div class="heading">
+					<h1 class="heading1">👋 Hey There, I'm Matthew!</h1>
+					<p>I'm an active member of Carleton's student community, the previous President and five-time elected executive of the <a href="https://ccss.carleton.ca/">Carleton Computer Science Society</a>, and a previous <a href="https://www.sciencesociety.ca/">SciSoc</a> council member (2022-2023).</p>
+					<p>During my tenor as a volunteer at Carleton, I've led the organization of hundreds of events (some with over 100-600 attendees), managed five-figure budgets, and mentored dozens of teams and students within the community.</p>
+					<p>My experience has given me a deep understanding of the needs of our community and the skills to address them. I'm excited to bring my experience to the role of VP Internal and work with the SciSoc team to create a more inclusive and engaging community for all students.</p>
+					<h1 class="heading1">My Platform</h1>
+					<h2>🎉 More Departmental Society Collaborations</h2>
+					<p>It's difficult for SciSoc to equitably represent the specific needs of each science department. Meanwhile, departmental societies best understand the program specific desires of their students, but often cannot realize their full potential due to a lack of funds. Next year, I'd like to push for bigger and better funded collaborations with departmental societies to ensure that the needs of all science students are met.</p>
+					<h2>👷 Re-Evaluation of Core Roles and Organizational Structure</h2>
+					<p>The distribution of responsibilities among the SciSoc executive roles, as outlined in the constitution and website, feels uneven. Furthermore, certain positions, such as the VP of Communications, are critical single points of failure for the organization. For example, if the VP of Communications be unable to perform their duties, information about events and initiatives may not effectively reach students; impacting any other executive working on initiatives that require public notice.</p>
+					<h2>🗳️ Transparent and Fair Elections</h2>
+					<p>This past election was not transparent or fair. Notice of the election and changes made to the timeline were not adequately communicated to eligible voters. It is also a conflict of interest that the VP Internal or any current executive be involved with running the election. Next year, I'd like to see SciSoc give better notice of the election and investigate having a third party handle its organization.</p>
+					<h2>📅 Scheduling More Events at the Beginning of Semesters</h2>
+					<p>This winter semester (not including wellness events), six events we're run in March, but only one was organized in January. Students have the most time to engage earlier in the term before the stress of exams and assignments set in. Under my management, I'd unsure more events are scheduled in more accessible times of the semester.</p>
+					<h2>💸 Upgraded Science Community Fund</h2>
+					<p>Today, the Science Community Fund is only accessible to departmental societies. I'd like to open up the fund to any student or Carleton club interested in collaborating with SciSoc on initatives that would benefit the science community. I'd also like to substantially increase the amount SciSoc contributes to this fund. </p>
+					<h2>🚀 Student Experience > Giveaways</h2>
+					<p>SciSoc has a history of doing large giveaways on items sometimes costing hundreds of dollars like <a href="https://www.instagram.com/p/CiOwX1ZD1Mw/">IPads</a>, <a href="https://www.instagram.com/p/C47_Rcyurd2/">headphones</a>, etc. I'd like to see SciSoc focus on creating more engaging events and initiatives that will help student build connections and memories that will last a lifetime. I'd like to prioritize growing the community over giving away items that will only benefit one student at a time.</p>
+					<h2>📸 Improved Social Media Presence</h2>
+					<p>SciSoc's Instagram posts could be improved with some with super minor tweaks. Updates like consistent logo placement and a simpler color scheme could make it easier to digest the important information in each post. I'd also love to see "recap" style posts with photos from various SciSoc events and iniatives.</p>
+					<h2>💻 Improved Representation for Computer Science</h2>
+					<p>Computer Science makes up more than 50% of Science, yet many computer science students do not feel like they belong in the greater Carleton science community. As SciSoc receives over $25,000 in funding from computer science students through the "Science Student Society" levy, computer science deserves to be equitably accommodated for its program specific needs.</p>			
+				</div>
 			</div>
 		</div>
-		<div class="heading">
-			<h1>PARALLAX <span class = "crimson">IS</span> AWESOME</h1>
-		</div>
+		<!-- <div class="heading">
+			<h1>test</h1>
+		</div> -->
 	</body>
 </html>
 
@@ -34,6 +68,7 @@
 body {
   margin: 0;
   overflo-x: hidden;
+  background-color: rgb(234 234 234);
   font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 img {
@@ -59,22 +94,42 @@ img {
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-  background-image: url('http://localhost:4321/background_2.png');
+  background-image: url('http://localhost:4321/background.png');
+}
+
+@media (max-width: 768px) {
+	.foreground {
+		height: 50vh;
+	}
 }
 h1 {
   text-align: center;
   color: white;
   font-family: sans-serif;
-  margin-top: 30vh;
+  /* margin-top: 20vh; */
   font-weight: 900;
 }
-.heading {
+.content {
   position: relative;
-  top: 75vh;
+  /* top: 30vh; */
   width: 100%;
-  height: 1000px;
-  background-color: white;
+  height: 100vh;
+  color: black;
+  /* background-color: rgba(255, 255, 255, 0); */
   border: 0px solid crimson;
+  z-index: 1;
+}
+
+.background-color {
+	  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75vh;
+  background: rgba(30, 26, 26, 0.676);
+  border: 0px solid black;
+  z-index: 1;
+
 }
 .heading h1 {
   color: black;
@@ -82,8 +137,126 @@ h1 {
   margin-top: 0;
   padding-top: 20px;
 }
+
+.heading {
+	display:flex;
+	text-align: left;
+	justify-content: start;
+	flex-direction: column;
+	padding: 1rem 2rem;
+}
+
+.header {
+	/* background: rgba(30, 26, 26, 0.676); */
+	min-height: 50vh;
+	height: fit-content;
+	display:flex;
+	justify-content: center;
+	align-items: start;
+	flex-direction: column;
+	color: white !important;
+	text-align: left;
+	max-width: 900px;
+	padding: 0 2.5rem;
+	margin:auto;
+	
+}
+@media (max-width: 768px) {
+		.header {
+			height: 50vh;
+			align-items: center;
+			text-align: center !important;
+		}
+
+		.platform {
+			padding: 0;
+		}
+	}
+
+.platform {
+	height: 100vh;
+	height: fit-content;
+	max-width: 900px;
+	background: white;
+	z-index: 2;
+	margin:auto;
+	border-radius: 0.25rem;
+	padding:3rem 4rem;
+	text-align: left;
+	margin: auto;
+}
+
+@media (max-width: 768px) {
+
+		.platform {
+			padding: 0;
+		}
+
+		.heading {
+			padding-top: 2rem;
+		}
+	}
+
+.name {
+	font-size: 3.5rem;
+    line-height: 1.2;
+    color: rgb(247, 247, 247);
+    word-spacing: 1px;
+    font-weight: 700;
+    text-transform: none;
+	margin-bottom: 0;
+}
+
+.title {
+	font-size: 1.5rem;
+	line-height: 1.2;
+	color: rgb(245, 166, 35);
+	word-spacing: 1px;
+	font-weight: 700;
+	text-transform: none;
+}
+
+.heading1 {
+	font-size: 2.2rem !important;
+	text-align: left;
+	margin-bottom: 2.5rem;
+}
 .crimson {
   color: crimson;
+}
+
+p {
+	  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: black;
+  margin-bottom: 2.5rem;
+}
+
+a {
+	  color: crimson;
+  text-decoration: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 4rem;
+  width: auto;
 }
 
 </style>
