@@ -58,9 +58,11 @@
 
 <script>
 	window.addEventListener('scroll',function(){
-	scrollValue = window.pageYOffset;
-	var pic = document.querySelector('.background');
+	const scrollValue = window.pageYOffset;
+	const pic = document.querySelector('.background') as HTMLElement;
 	pic.style.transform = 'translateY('+(-scrollValue/5)+'px)';
+	const pic2 = document.querySelector('.background-color') as HTMLElement;
+	pic2.style.transform = 'translateY('+(-scrollValue/5)+'px)';
 });
 </script>
 
